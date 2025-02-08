@@ -8,8 +8,6 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class UserDTO {
 
     @NotBlank(message = "First name is required")
@@ -27,7 +25,7 @@ public class UserDTO {
     private String email;
 
     @NotBlank
-    @Size(min = 8, message = "Password must be at least 8 characters long")
+    @Size(min = 6, message = "Password must be at least 6 characters long")
     private String password;
 
     @NotBlank
